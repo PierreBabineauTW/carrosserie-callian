@@ -1,0 +1,3 @@
+:HL["/carrosserie-callian/_next/static/chunks/1ui_7foq5nv3o.css","style"]
+:HL["/carrosserie-callian/_next/static/media/07454f8ad8aaac57-s.p.2kjei9psvcorz.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"conditions","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Izt1l-dYlNBCzY7ZJYLxR"}
