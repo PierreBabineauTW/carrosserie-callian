@@ -4,6 +4,7 @@ import { LanguageProvider, useLang } from "@/i18n/LanguageContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/ContactFooter";
 import { business } from "@/i18n/dictionaries";
+import { withBase } from "@/lib/site";
 
 function Content() {
   const { lang } = useLang();
@@ -42,7 +43,7 @@ function Content() {
             </div>
           ))}
         </dl>
-        <a href="/" className="btn btn-outline mt-10">
+        <a href={withBase("/")} className="btn btn-outline mt-10">
           ← {fr ? "Retour à l'accueil" : "Back home"}
         </a>
       </div>

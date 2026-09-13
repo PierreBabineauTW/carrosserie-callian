@@ -5,6 +5,7 @@ import { LanguageProvider, useLang } from "@/i18n/LanguageContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/ContactFooter";
 import { CookieBanner, StickyMobileCta } from "@/components/Overlays";
+import { withBase } from "@/lib/site";
 
 export function LegalShell({ title, subtitle, children }: { title: string; subtitle: string; children: ReactNode }) {
   return (
@@ -19,7 +20,7 @@ export function LegalShell({ title, subtitle, children }: { title: string; subti
         </div>
         <div className="container-default section py-16! lg:py-24!">
           <div className="max-w-[800px]">{children}</div>
-          <a href="/" className="btn btn-outline mt-10">
+          <a href={withBase("/")} className="btn btn-outline mt-10">
             ← Accueil
           </a>
         </div>

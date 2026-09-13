@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withBase } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Page introuvable",
@@ -13,7 +14,7 @@ export default function NotFound() {
       <p className="mx-auto mt-4 max-w-md text-black/60">
         La page demandée n&apos;existe pas ou a été déplacée. Retournez à l&apos;accueil pour demander un devis.
       </p>
-      <a href="/" className="btn btn-primary mt-8">
+      <a href={withBase("/")} className="btn btn-primary mt-8">
         Retour à l&apos;accueil →
       </a>
     </main>

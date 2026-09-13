@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const base = "https://www.carrosserie-callian.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {

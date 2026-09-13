@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useLang } from "@/i18n/LanguageContext";
 import { business } from "@/i18n/dictionaries";
+import { withBase } from "@/lib/site";
 
 export function StickyMobileCta() {
   const { lang } = useLang();
@@ -21,7 +22,7 @@ export function StickyMobileCta() {
       <a href={business.phoneHref} className="flex items-center justify-center gap-2 px-4 py-4 text-[15px] font-black uppercase tracking-wide text-white">
         <span aria-hidden>📞</span> {lang === "fr" ? "Appeler" : "Call"}
       </a>
-      <a href="/#devis" className="flex items-center justify-center gap-2 bg-[#1557ff] px-4 py-4 text-[15px] font-black uppercase tracking-wide text-white">
+      <a href={withBase("/#devis")} className="flex items-center justify-center gap-2 bg-[#1557ff] px-4 py-4 text-[15px] font-black uppercase tracking-wide text-white">
         {lang === "fr" ? "Devis gratuit" : "Free quote"} <span aria-hidden>→</span>
       </a>
     </div>
@@ -64,7 +65,7 @@ export function CookieBanner() {
           <button onClick={() => accept("all")} className="btn btn-primary btn-small flex-1 text-[13px]!">
             {fr ? "Compris" : "Got it"}
           </button>
-          <a href="/confidentialite" className="btn btn-outline btn-small flex-1 text-[13px]!">
+          <a href={withBase("/confidentialite")} className="btn btn-outline btn-small flex-1 text-[13px]!">
             {fr ? "En savoir plus" : "Learn more"}
           </a>
         </div>

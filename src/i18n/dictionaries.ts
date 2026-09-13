@@ -1,6 +1,6 @@
 export type Lang = "fr" | "en";
 
-export const IMG = "/sites/carrepairtemplate-webflow-io-e0f44567/home-pages-home-v1-b3493274";
+export const IMG = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/sites/carrepairtemplate-webflow-io-e0f44567/home-pages-home-v1-b3493274`;
 
 export const business = {
   name: "La Carrosserie — Callian",

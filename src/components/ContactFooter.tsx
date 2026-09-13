@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/i18n/LanguageContext";
 import { business } from "@/i18n/dictionaries";
+import { withBase } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
@@ -126,13 +127,13 @@ export function Footer() {
         <div className="container-default flex flex-wrap items-center justify-between gap-3 py-6 text-[13px] text-white/40">
           <p>{t.footer.legal}</p>
           <p className="flex flex-wrap gap-x-4 gap-y-1">
-            <a href="/mentions-legales" className="underline hover:text-white">
+            <a href={withBase("/mentions-legales")} className="underline hover:text-white">
               Mentions légales
             </a>
-            <a href="/confidentialite" className="underline hover:text-white">
+            <a href={withBase("/confidentialite")} className="underline hover:text-white">
               Confidentialité
             </a>
-            <a href="/conditions" className="underline hover:text-white">
+            <a href={withBase("/conditions")} className="underline hover:text-white">
               Conditions
             </a>
             <span>Callian · Var · France</span>
