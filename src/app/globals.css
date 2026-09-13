@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
+  --color-accent: #1557ff;
+  --color-ink: #000000;
+  --color-coal: #2b2b2b;
+  --color-smoke: #4f4f4f;
+  --color-grey: #939393;
+  --color-line: #d2d2d2;
+  --color-mist: #ececec;
+  --color-cloud: #f4f4f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #fff;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+/* ---- Template-faithful primitives (from carrepairtemplate.webflow.shared CSS) ---- */
+.container-default {
+  max-width: 1266px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media (max-width: 767px) {
+  .container-default {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.section {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+@media (min-width: 992px) {
+  .section {
+    padding-top: 190px;
+    padding-bottom: 190px;
+  }
+}
+
+.subtitle {
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.125em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 18px 28px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.111em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s, transform 0.3s, color 0.3s;
+}
+.btn:hover {
+  transform: translate3d(0, -3px, 0.01px);
+}
+.btn-primary {
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+.btn-light {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+}
+.btn-light:hover {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+.btn-outline {
+  border: 1.5px solid #000;
+  background-color: transparent;
+  color: #000;
+}
+.btn-outline:hover {
+  background-color: #000;
+  color: #fff;
+}
+.btn-outline-light {
+  border: 1.5px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
+.btn-small {
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.h-display {
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.2em;
+}
+
+/* Giant outlined background word (bg-text-wrapper signature) */
+.bg-word {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+  font-size: clamp(72px, 11vw, 190px);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.14);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+.bg-word.on-dark {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.16);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
